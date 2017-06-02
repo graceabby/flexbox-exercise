@@ -3,3 +3,107 @@ box-sizing: border-box;
 padding: 0;
 margin: 0;
 }
+body {
+	padding-top: 50px;
+}
+h2 {
+	text-align: center;
+	background: #ffc2ab;
+}
+#about {
+	color: #fff;
+}
+.top-nav {
+	display: flex;
+	background: #FFC2AB;
+	min-height: 50px;
+	overflow: hidden;
+	align-items: center;
+	position: fixed;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+.top-nav a {
+	text-decoration: none;
+	color: #000;
+	transition: .5s;
+}
+.top-nav a:hover {
+ 	color: #fff;
+ 	border-bottom: 3px solid #FFC2AB;
+}
+.brand-text {
+	font-size: 30px;
+	margin-left: 15px;
+}
+.top-nav-list {
+	display: flex;
+	list-style: none;
+	margin-left: auto;
+}
+.top-nav-list li {
+	margin: 0px 15px;
+}
+.top-nav-list a {
+ 	padding: 10px;
+}
+.full-screen-bg {
+	height: calc(100vh - 50px); /* 100vh makes it fill the entire height of the viewport */
+	width: 100%; 
+	background-image: url("../images/large-dog.jpeg");
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center; 
+	color: #fff;
+	transition: background-image .5s;
+	}
+.flex-row {
+	display: flex;
+	background: #ffc2ab;
+}
+.col-4-2-1 {
+	width: 23%;
+	margin: 1%;
+	padding: 10px;
+}
+.img-col {
+	width: 100%;
+	border-radius: 50%;
+	transition: .5s;
+}
+.col-4-2-1 img {
+	transition: .5s;
+	border: 0px solid #fff;	
+}
+.col-4-2-1 img:hover {
+	opacity: .8;
+	border: 5px solid #fff;
+}
+.col-4-2-1 p {
+	padding: 10px 0;
+}
+@media (max-width: 1200px) {
+	.full-screen-bg {
+		background-image: url(../images/med-dog.jpeg);
+		}
+	.flex-row{
+		flex-wrap: wrap;
+		}
+	.col-4-2-1 {
+		width: 48%;
+		}
+	}
+@media (max-width: 600px) {
+	.top-nav {
+		display: block;
+	}
+	.full-screen-bg {
+		background-image: url(../images/small-dog.jpeg);
+		}
+	.col-4-2-1 {
+		width: 98%;
+		}
+	}
